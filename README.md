@@ -28,14 +28,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## AngularCRUD
 
-# echo "# AngularCRUD" >> README.md
+## echo "# AngularCRUD" >> README.md
 
-# git init
+## git init
 
-# git add README.md
+## git add README.md
 
-# git commit -m "first commit"
+## git commit -m "first commit"
 
-# git remote add origin https://github.com/zAhmedAly/AngularCRUD.git
+## git remote add origin https://github.com/zAhmedAly/AngularCRUD.git
 
-# git push -u origin master
+## git push -u origin master
