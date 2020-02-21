@@ -1,0 +1,28 @@
+<div class="container">
+  <nav class="nav my-3">
+    <a
+      class="nav-link active"
+      [routerLink]="['/list']"
+      routerLinkActive="router-link-active"
+      >List</a
+    >
+    <a
+      class="nav-link"
+      [routerLink]="['/edit/0']"
+      routerLinkActive="router-link-active"
+      >Create</a
+    >
+  </nav>
+
+  <div class="lds-roller" *ngIf="showLoadingIndicator">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
