@@ -20,6 +20,7 @@ import { EmployeeListResolverService } from './employees/employee-list-resolver.
 import { PageNotFoundComponent } from './page-not-found.component';
 import { EmployeeDetailsGuardService } from './employees/employee-details-guard.service';
 import { AccordionComponent } from './shared/accordion.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 const appRoutes: Routes = [
   {
@@ -33,11 +34,12 @@ const appRoutes: Routes = [
     canDeactivate: [CreateEmployeeCanDeactivateGuardService]
   },
   {
-    path: 'employees/:id', component: EmployeeDetailsComponent,
+    path: 'employees/:id',
+    component: EmployeeDetailsComponent,
     canActivate: [EmployeeDetailsGuardService]
   },
   { path: '', redirectTo: '/list', pathMatch: 'full' },
-  { path: 'notfound', component: PageNotFoundComponent },
+  { path: 'notfound', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -55,13 +57,18 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    Ng2SearchPipeModule,
     FormsModule,
     HttpClientModule,
     BsDatepickerModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [EmployeeService, CreateEmployeeCanDeactivateGuardService,
-    EmployeeListResolverService, EmployeeDetailsGuardService],
+  providers: [
+    EmployeeService,
+    CreateEmployeeCanDeactivateGuardService,
+    EmployeeListResolverService,
+    EmployeeDetailsGuardService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

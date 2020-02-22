@@ -1,3 +1,53 @@
+<div class="form-group">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Search Here"
+    [(ngModel)]="term"
+  />
+</div>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Birth Date</th>
+        <th scope="col">Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of filteredEmployees | filter: term">
+        <td scope="row">{{ employee.name }}</td>
+
+        <td>{{ employee.gender }}</td>
+        <td>{{ employee.dateOfBirth }}</td>
+        <td>{{ employee.phoneNumber }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Birth Date</th>
+        <th scope="col">Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of filteredEmployees | filter: term">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.gender }}</td>
+        <td>{{ employee.dateOfBirth | date }}</td>
+        <td>{{ employee.phoneNumber }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <div class="form-group my-3">
   <input
     type="text"

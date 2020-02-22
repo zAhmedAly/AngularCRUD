@@ -2,37 +2,70 @@
   "employees": [
     {
       "id": 1,
-      "name": "Mark",
+      "name": "Mark John",
       "gender": "Male",
       "contactPreference": "Phone",
       "phoneNumber": "34345",
       "email": "",
-      "dateOfBirth": "2018-07-01T08:20:34.000Z",
-      "department": "3",
+      "dateOfBirth": "01/07/1956",
+      "department": "1",
       "isActive": true,
       "photoPath": "assets/images/mark.png"
     },
     {
+      "id": 2,
+      "name": "John Smiry",
+      "gender": "Male",
+      "contactPreference": "Phone",
+      "phoneNumber": 5432978640,
+      "dateOfBirth": "03/25/1976",
+      "department": "2",
+      "isActive": false,
+      "photoPath": "assets/images/john.png"
+    },
+    {
       "id": 3,
-      "name": "Mary",
+      "name": "Mary Smith",
       "gender": "Female",
       "contactPreference": "Phone",
       "phoneNumber": 2345978640,
-      "dateOfBirth": "1979/11/20",
+      "dateOfBirth": "11/20/1979",
+      "department": "3",
+      "isActive": true,
+      "photoPath": "assets/images/mary.png"
+    },
+    {
+      "id": 4,
+      "name": "Ahmed Aly",
+      "gender": "Male",
+      "contactPreference": "Phone",
+      "phoneNumber": 8189709072,
+      "dateOfBirth": "06/03/1971",
+      "department": "1",
+      "isActive": true,
+      "photoPath": "assets/images/mark.png"
+    },
+    {
+      "id": 4,
+      "name": "Habiba Aly",
+      "gender": "Female",
+      "contactPreference": "Phone",
+      "phoneNumber": 6612593893,
+      "dateOfBirth": "10/06/2003",
       "department": "2",
       "isActive": true,
       "photoPath": "assets/images/mary.png"
     },
     {
-      "id": 2,
-      "name": "John",
-      "gender": "Male",
+      "id": 4,
+      "name": "Reham Kassem",
+      "gender": "Female",
       "contactPreference": "Phone",
-      "phoneNumber": 5432978640,
-      "dateOfBirth": "1976/3/25",
-      "department": "3",
-      "isActive": false,
-      "photoPath": "assets/images/john.png"
+      "phoneNumber": 8187310560,
+      "dateOfBirth": "05/12/1978",
+      "department": "2",
+      "isActive": true,
+      "photoPath": "assets/images/mary.png"
     }
   ]
 }

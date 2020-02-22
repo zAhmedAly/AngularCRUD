@@ -11,6 +11,7 @@ export class ListEmployeesComponent implements OnInit {
   employees: Employee[];
   filteredEmployees: Employee[];
   error: string;
+  term: string;
 
   private _searchTerm: string;
   get searchTerm(): string {
@@ -22,12 +23,16 @@ export class ListEmployeesComponent implements OnInit {
   }
 
   filtereEmployees(searchString: string) {
-    return this.employees.filter(employee =>
-      employee.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
+    return this.employees.filter(
+      employee =>
+        employee.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1
+    );
   }
 
   constructor(private _router: Router, private _route: ActivatedRoute) {
-    const resolvedData: Employee[] | string = this._route.snapshot.data['employeeList'];
+    const resolvedData: Employee[] | string = this._route.snapshot.data[
+      'employeeList'
+    ];
     if (Array.isArray(resolvedData)) {
       this.employees = resolvedData;
     } else {
@@ -47,6 +52,5 @@ export class ListEmployeesComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
